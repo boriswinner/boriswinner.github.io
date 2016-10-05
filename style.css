@@ -1,0 +1,28 @@
+body {
+	background-color: PeachPuff;
+}
+h1 {
+	font-family: Impact, Charcoal, sans-serif;
+	color: LightCoral;
+	text-align: center;
+	border: 4px double blue;
+	font-size: xx-large;
+	text-transform: uppercase;
+}
+h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: SteelBlue;
+	text-align: center;
+	font-size: x-large;
+	font-variant: small-caps;
+}
+p {
+	font-family: Tahoma, Geneva, sans-serif;
+	text-align: justify;
+	font-size: large;
+}
+img.l{
+	text-align: left;
+	align: left;
+	border = "2";
+}
