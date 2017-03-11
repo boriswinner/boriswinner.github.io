@@ -1,6 +1,7 @@
 body {
 	background-color: PeachPuff;
 }
+
 h1 {
 	font-family: Impact, Charcoal, sans-serif;
 	color: LightCoral;
@@ -26,3 +27,28 @@ img.l{
 	align: left;
 	border = "2";
 }
+      #navbar {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border: 2px solid #0066FF;
+        border-radius: 20px 5px;
+        width: 550px;
+        text-align: center;
+        background-color: LightCoral;
+      }
+      #navbar li { display: inline; }
+      #navbar a {
+        color: #fff;
+        padding: 5px 10px;
+		font-family: Tahoma, Geneva, sans-serif;
+		font-variant: small-caps;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+      }
+      #navbar a:hover {
+        border-radius: 20px 5px;
+        background-color: #0066FF;
+      }
