@@ -89,7 +89,7 @@ var createOnClickListener = function(){
 			}
 			reDraw();
 			win = checkWin();
-			moveAI();
+			if (!win) moveAI();
 			reDraw();
 		}, false);	
 }
@@ -100,18 +100,22 @@ var checkWin = function(){
 	for (var x = 0; x < 3; ++x){
 		if ((gameStatus[x][0] === gameStatus[x][1]) && (gameStatus[x][1] === gameStatus[x][2])){
 			 if (gameStatus[x][0] != 0) win = gameStatus[x][0];
+			 return win;
 		}
 	}	
 	for (var y = 0; y < 3; ++y){
 		if ((gameStatus[0][y] === gameStatus[1][y]) && (gameStatus[1][y] === gameStatus[2][y])){
 			 if (gameStatus[0][y] != 0) win = gameStatus[0][y];
+			 return win;
 		}		
 	}
 	if ((gameStatus[0][0] == gameStatus[1][1]) && (gameStatus[1][1] == gameStatus[2][2])){
 		if (gameStatus[0][0] != 0) win = gameStatus[0][0];
+		return win;
 	}
 	if ((gameStatus[0][2] == gameStatus[1][1]) && (gameStatus[1][1] == gameStatus[2][0])){
 		if (gameStatus[0][2] != 0) win = gameStatus[0][2];
+		return win;
 	}	
 	for (var x in gameStatus){
 		for (var y in gameStatus[x]){
