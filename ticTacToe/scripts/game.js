@@ -1,8 +1,7 @@
 ﻿"use strict"
-var gCanvas = document.getElementById('cgame');
-var gContext = gCanvas.getContext('2d');
-var gLog = document.getElementById('log');
-gLog.innerHTML = 'Loading...';
+var gCanvas;
+var gContext;
+var gLog;
 var gameStatus = [[0,0,0],[0,0,0],[0,0,0]];
 var cross;
 var dot;
@@ -16,14 +15,21 @@ function randomInteger(min, max) {
 }
 
 function loadGame(){
-	cross = document.getElementById('cross');
+	gCanvas = document.getElementById('cgame');
+	gContext = gCanvas.getContext('2d');
+	gLog = document.getElementById('log');
+	gLog.innerHTML = 'Loading...';
+	cross = new Image();
+	cross.src = "img/cross.png";
 	cross.onload = function(){
-		dot = document.getElementById('dot');
+		dot = new Image();
+		dot.src = "img/dot.png"
 		dot.onload = function(){
 			gLog.innerHTML = 'Loaded!';
+			createOnClickListener();
+			reDraw();			
 		}
 	}	
-	createOnClickListener();
 }
 
 function eraseGame(){
@@ -140,6 +146,3 @@ var moveAI = function(){
 	reDraw;
 	win = checkWin();
 }
-
-loadGame();
-reDraw();
