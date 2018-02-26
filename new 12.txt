@@ -1,0 +1,7 @@
+<h2>Small Introduction</h2>
+<p>Boris Timofeenko aka boriswinner - second course FEFU student, programmer, musician. On my website you can find my
+    projects connected with programming and music. </p>
+<p><a href="http://vk.com/id146669259">My personal page on VK</a></p>
+           <header class="w3-container w3-blue w3-center">
+                <h2 class="w3-center" style="text-transform: uppercase">My programming projects</h2>
+            </header>

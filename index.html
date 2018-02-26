@@ -1,57 +1,122 @@
-<!doctype html> 
-<html> 
-<head> 
-    <title>boriswinner's page</title> 
-    <meta charset="UTF-8" /> 
-    <link rel="icon" href="favicon.ico" /> 
-    <link rel="stylesheet" type="text/css" href="style.css"> 
-	<meta name = "description" content = "boriswinner web page" /> 
-	<meta name = "keywords" content = "boriswinner, programming, FEFU, coding, raycaster, blog, music, bass, bass covers" /> 
-	<meta name = "robots" content = "index,follow" /> 	
-</head> 
-<body> 
-    <h1>Welcome to boriswinner's page</h1>
-    <center><ul id="navbar">
-      <li><a href="index.html">Coding</a></li>
-      <li><a href="music.html">Music</a></li>
-    </ul></center>	
-	<h2>Small Introduction</h2>
-	<p>Boris Timofeenko aka boriswinner - second course FEFU student, programmer, musician. On my website you can find my projects connected with programming and music. </p>
-	<p><a href="http://vk.com/id146669259">My personal page on VK</a></p>
-	<h1>My Programming Projects</h1>
-	<div><h2>Athanatos</h2>
-	<div><center><img align="middle" src="ath.png" hspace="5"></img></center>	</div>
-	<center><p> In collaboration with <b>t1meshift</b>. Data storage for business based on blockchain technology. Is written on Java. All the data is stored in the blockchain, which is synchronized beetween the company's computers. Now in development (initially works). Written on VL Hackaton spring 2017. </p><center>
-	<p><a href="https://github.com/t1meshift/athanatos">Download latest source code (GitHub)</a></p></div>	
-	<div><h2>Raycaster</h2>
-	<div><center><img align="middle" src="raycaster.gif" hspace="5"></img></center>	</div>
-	<center><p>A raycasting engine written with my friend, <b>t1meshift</b>, using Lazarus IDE. Uses SDL2 for hardware render, SquallSound for sound. Supports textures, transparency, solid and not solid walls, colisions, diffenent resolutions and FOV's. Now is is in development. </p><center>
-	<p><a href="https://github.com/boriswinner/raycaster/tree/testing">Download latest source code (GitHub)</a></p></div>	
-	<div><h2>3IR</h2>
-	<div><center><img align="middle" src="3IR.png" hspace="5"></img></center>	</div>
-	<center><p>Candy Eater game, written on JS with <b>ZeroICQ</b> and <b>SergeyZinkovich</b>. </p><center>	
-	<p><a href="https://github.com/ZeroICQ/3IR">Download latest source code (GitHub)</a></p></div>	
-	<p><a href="https://zeroicq.github.io/3IR/">Play Online</a></p></div>
-	<div><h2>Dynnu</h2>
-	<div><center><img align="middle" src="DynnuScr.png" hspace="5"></img></center>	</div>
-	<center><p>Dunnu is a vector graphics editor written using Lazarus&Free Pascal. Now is is in development. </p><center>
-	<p><a href="https://github.com/boriswinner/Dynnu/releases/">Download latest release&source code (GitHub)</a></p></div>	
-	<div><h2>wba</h2>
-	<div><center><img align="middle" src="wba.png" hspace="5"></img></center>	</div>
-	<center><p>Web Database Application provides a web interface for a schedule database. This server application is written on Python using Flask as the web framework and Firebird as the database. </p><center>
-	<p><a href="https://github.com/boriswinner/wba">Download latest release&source code (GitHub)</a></p></div>	
-	<div><h2>fpcCalc</h2>
-	<div><center><img align="middle" src="screencalc1.png" hspace="5"></img></center></div>
-	<center><p>fpcCalc is a simple calculator program (partially clone of the one implemented in Windows 7) written using FreePascal and Lazarus IDE. Concieved as just a small homework, this project grew a little further: I added some features and licensed the program under GPLv3.</p>
-	<p><a href="https://github.com/boriswinner/fpcCalc/releases/">Download latest release&source code (GitHub)</a></p></center></div>
-	<div><h2>Tic Tac Toe</h2>
-	<div><center><img align="middle" src="tic.png" hspace="5"></img></center></div>
-	<center><p>Adoptive Tic Tac Toe Game written on JS, using HTML 5 features.</p>
-	<p><a href="https://boriswinner.github.io/Tic-Tac-Toe/">Play online</a></p>
-	<p><a href="https://github.com/boriswinner/Tic-Tac-Toe">Download latest release&source code (GitHub)</a></p></center></div>	
-	<div><h2>CATS tasks solutions</h2>
-	<div><center><img align="middle" src="tasks.png" hspace="5"></img></center>	</div>
-	<center><p>Just a repo with my homeworks - tasks solutions in the CATS system. </p><center>
-	<p><a href="https://github.com/boriswinner/task-solutions/">Download source codes (GitHub)</a></p></div>		
-</body> 
+<!doctype html>
+<html>
+<head>
+    <script src="static/jquery-3.2.1.min.js"></script>
+    <script>
+        $('head').load("head.html");
+    </script>
+</head>
+
+<!--Header-->
+<body class="w3-purple">
+<div class="w3-container w3-theme">
+    <h1 class="w3-center" style="text-transform: uppercase">Welcome to boriswinner's page</h1>
+</div>
+<div class="w3-bar w3-theme w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-theme-d1 w3-hover-cyan">Coding</a>
+    <a href="music.html" class="w3-bar-item w3-button w3-mobile w3-theme w3-hover-cyan">Music</a>
+</div>
+
+<!--Content-->
+
+
+<header class="w3-container w3-theme-d1 w3-center">
+    <h2 class="w3-center" style="text-transform: uppercase">My programming projects</h2>
+</header>
+
+<div class="w3-row">
+    <div class="w3-col s6 w3-theme-l3 w3-center">
+        <header class="w3-container w3-Purple">
+            <h2 style="text-transform: uppercase">Athanatos</h2>
+        </header>
+        <div class="w3-container">
+            <img src="ath.png" style="width:100%">
+            <p> In collaboration with <b>t1meshift</b>. Data storage for business based on blockchain technology. Is
+                written on Java. All the data is stored in the blockchain, which is synchronized beetween the
+                company's computers. Now in development (initially works). Written on VL Hackaton spring 2017. </p>
+            <p><a href="https://github.com/t1meshift/athanatos">Download latest source code (GitHub)</a></p>
+        </div>
+    </div>
+    <div class="w3-col s6 w3-theme-l4 w3-center">
+        <h2 style="text-transform: uppercase">Raycaster</h2>
+        <div class="w3-container w3-center"><img src="raycaster.gif" style="width:70%">
+            <p>A raycasting engine written with my friend, <b>t1meshift</b>, using Lazarus IDE. Uses SDL2 for hardware
+                render, SquallSound for sound. Supports textures, transparency, solid and not solid walls, colisions,
+                diffenent resolutions and FOV's. Now is is in development. </p>
+            <p><a href="https://github.com/boriswinner/raycaster/tree/testing">Download latest source code (GitHub)</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="w3-row">
+    <div class="w3-col s6 w3-theme-l4 w3-center">
+        <header class="w3-container w3-Purple">
+            <h2 style="text-transform: uppercase">Dynnu</h2>
+        </header>
+        <div class="w3-container">
+            <img src="DynnuScr.png" style="width:60%">
+            <p>Dunnu is a vector graphics editor written using Lazarus&Free Pascal. Now is is in development. </p>
+            <p><a href="https://github.com/boriswinner/Dynnu/releases/">Download latest release&source code (GitHub)</a>
+            </p>
+        </div>
+    </div>
+    <div class="w3-col s6 w3-theme-l3 w3-center">
+        <h2 style="text-transform: uppercase">3IR</h2>
+        <div class="w3-container w3-center"><img src="3IR.png" style="width:40%">
+            <p>Candy Eater game, written on JS with <b>ZeroICQ</b> and <b>SergeyZinkovich</b>. </p>
+            <p><a href="https://github.com/ZeroICQ/3IR">Download latest source code (GitHub)</a></p>
+            <p><a href="https://zeroicq.github.io/3IR/">Play Online</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="w3-row">
+    <div class="w3-col s6 w3-theme-l3 w3-center">
+        <header class="w3-container w3-Purple">
+            <h2 style="text-transform: uppercase">wba</h2>
+        </header>
+        <div class="w3-container">
+            <img src="wba.png" style="width:60%">
+            <p>Web Database Application provides a web interface for a schedule database. This server application is
+                written on Python using Flask as the web framework and Firebird as the database. </p>
+            <p><a href="https://github.com/boriswinner/wba">Download latest release&source code (GitHub)</a></p>
+            </p>
+        </div>
+    </div>
+    <div class="w3-col s6 w3-theme-l4 w3-center">
+        <h2 style="text-transform: uppercase">fpcCalc</h2>
+        <div class="w3-container w3-center"><img src="screencalc1.png" style="width:40%">
+            <p>fpcCalc is a simple calculator program (partially clone of the one implemented in Windows 7) written
+                using FreePascal and Lazarus IDE. Concieved as just a small homework, this project grew a little further: I
+                added some features and licensed the program under GPLv3.</p>
+            <p><a href="https://github.com/boriswinner/fpcCalc/releases/">Download latest release&source code (GitHub)</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="w3-row">
+    <div class="w3-col s6 w3-theme-l4 w3-center">
+        <header class="w3-container w3-Purple">
+            <h2 style="text-transform: uppercase">Tic Tac Toe</h2>
+        </header>
+        <div class="w3-container">
+            <img src="tic.png" style="width:30%">
+            <p>Adoptive Tic Tac Toe Game written on JS, using HTML 5 features.</p>
+            <p><a href="https://boriswinner.github.io/Tic-Tac-Toe/">Play online</a></p>
+            <p><a href="https://github.com/boriswinner/Tic-Tac-Toe">Download latest release&source code (GitHub)</a></p>
+        </div>
+    </div>
+    <div class="w3-col s6 w3-theme-l3 w3-center">
+        <h2 style="text-transform: uppercase">CATS tasks solutions</h2>
+        <div class="w3-container w3-center"><img src="tasks.png" style="width:50%">
+            <p>Just a repo with my homeworks - tasks solutions in the CATS system. </p>
+
+            <p><a href="https://github.com/boriswinner/task-solutions/">Download source codes (GitHub)</a></p>
+        </div>
+    </div>
+</div>
+</body>
 </html>
