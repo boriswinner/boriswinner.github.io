@@ -1,75 +1,97 @@
 <!doctype html>
 <html>
-<head>
-    <script src="static/jquery-3.2.1.min.js"></script>
-    <script>
-        $('head').load("head.html");
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <script src="static/jquery-3.2.1.min.js"></script>
+        <script src="static/jsrender.js"></script>
+        <script>
+            $('head').load("head.html");
+        </script>
+    </head>
 
-<!--Header-->
-<body class="w3-purple">
-<div class="w3-container w3-theme">
-    <h1 class="w3-center" style="text-transform: uppercase">Welcome to boriswinner's page</h1>
-</div>
-<div class="w3-bar w3-theme w3-large">
-    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-theme w3-hover-cyan">Coding</a>
-    <a href="music.html" class="w3-bar-item w3-button w3-mobile w3-theme-d1 w3-hover-cyan">Music</a>
-</div>
+    <body class="w3-theme-dark">
+        <!--Header-->
+        <div class="w3-container w3-theme w3-margin">
+            <h1 class="w3-center" style="text-transform: uppercase">Welcome to boriswinner's page</h1>
+        </div>
+        <!--Top Menu-->
+        <div class="w3-margin">
+            <div class="w3-bar w3-theme w3-large">
+                <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-theme w3-hover-cyan">Coding</a>
+                <a href="music.html" class="w3-bar-item w3-button w3-mobile w3-theme-d1 w3-hover-cyan">Music</a>
+            </div>
+        </div>
+        <header class="w3-container w3-theme-d1 w3-center w3-margin">
+            <h2 class="w3-center" style="text-transform: uppercase">My covers</h2>
+        </header>
 
-<!--Content-->
+        <!--Template for showing content-->
+        <div id="result"></div>
 
+        <script id="elementTemplate" type="text/x-jsrender">
+                <div class="w3-row-padding w3-margin-bottom">
+                    <div class="w3-half">
+                        <div class="w3-theme-l3 w3-center">
+                            <header class="w3-container">
+                                <h2 style="text-transform: uppercase">
+                                    {{:header1}}
+                                </h2>
+                            </header>
+                            <div class="w3-container">
+                                <iframe width="100%" height="315" src="{{:src1}}" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
 
-<header class="w3-container w3-theme-d1 w3-center">
-    <h2 class="w3-center" style="text-transform: uppercase">My Covers</h2>
-</header>
+                    <div class="w3-half">
+                        <div class="w3-theme-l4 w3-center">
+                            <header class="w3-container">
+                                <h2 style="text-transform: uppercase">
+                                    {{:header2}}
+                                </h2>
+                            </header>
+                            <div class="w3-container">
+                                <iframe width="100%" height="315" src="{{:src2}}" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </script>
 
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">Children Of Bodom - Kissing The Shadows (bass cover)</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/N7gb7JCxXgI" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">Гречка - Скоростной Марафон (full cover)</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qdWrEIMWEzg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-</div>
+        <!--Content-->
+        <script charset="utf-8">
+            var data = [
+                {
+                    "header1":"Children Of Bodom - Kissing The Shadows (bass cover)",
+                    "src1":"https://www.youtube.com/embed/N7gb7JCxXgI",
+                    "header2":"Гречка - Скоростной Марафон (full cover)",
+                    "src2":"https://www.youtube.com/embed/qdWrEIMWEzg"
+                },
+                {
+                    "header1":"Ozzy Osbourne - Crazy Train (bass cover)",
+                    "src1":"https://vk.com/video_ext.php?oid=146669259&id=456239082&hash=7065028fdf8d5b23",
+                    "header2":"Nirvana - Sliver (bass cover)",
+                    "src2":"https://www.youtube.com/embed/Z-hz8XhsTRU"
+                },
+                {
+                    "header1":"Nirvana - Very Ape (bass cover)",
+                    "src1":"https://www.youtube.com/embed/41ekfbPOlTg",
+                    "header2":"Nirvana - Sliver (bass cover)",
+                    "src2":"https://www.youtube.com/embed/v55pO7ghDs8"
+                },
+                {
+                    "header1":"Nirvana - School (bass cover)",
+                    "src1":"https://www.youtube.com/embed/CvK8LDlKBBc",
+                    "header2":"Jimi Hendrix Experience - Wind Cries Mary (bass cover)",
+                    "src2":"https://vk.com/video_ext.php?oid=146669259&id=456239131&hash=2376ee0bcc55291d"
+                }
+            ];
+            var template = $.templates("#elementTemplate");
 
+            var htmlOutput = template.render(data);
 
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <h2 style="text-transform: uppercase">Ozzy Osbourne - Crazy Train (bass cover)</h2>
-        <iframe src="https://vk.com/video_ext.php?oid=146669259&id=456239082&hash=7065028fdf8d5b23" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">Nirvana - Sliver (bass cover)</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-hz8XhsTRU" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
+            $("#result").html(htmlOutput);
+        </script>
 
-
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">Nirvana - In Bloom (bass cover)</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/41ekfbPOlTg" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <h2 style="text-transform: uppercase">Nirvana - Very Ape (bass cover)</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/v55pO7ghDs8" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-
-
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">Nirvana - School (bass cover)</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/CvK8LDlKBBc" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <h2 style="text-transform: uppercase">Jimi Hendrix Experience - Wind Cries Mary (bass cover)</h2>
-        <iframe src="https://vk.com/video_ext.php?oid=146669259&id=456239131&hash=2376ee0bcc55291d" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
-
-</body>
+    </body>
 </html>
