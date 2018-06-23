@@ -1,122 +1,152 @@
 <!doctype html>
 <html>
-<head>
-    <script src="static/jquery-3.2.1.min.js"></script>
-    <script>
-        $('head').load("head.html");
-    </script>
-</head>
-
-<!--Header-->
-<body class="w3-purple">
-<div class="w3-container w3-theme">
-    <h1 class="w3-center" style="text-transform: uppercase">Welcome to boriswinner's page</h1>
-</div>
-<div class="w3-bar w3-theme w3-large">
-    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-theme-d1 w3-hover-cyan">Coding</a>
-    <a href="music.html" class="w3-bar-item w3-button w3-mobile w3-theme w3-hover-cyan">Music</a>
-</div>
-
-<!--Content-->
-
-
-<header class="w3-container w3-theme-d1 w3-center">
-    <h2 class="w3-center" style="text-transform: uppercase">My programming projects</h2>
-</header>
-
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <header class="w3-container w3-Purple">
-            <h2 style="text-transform: uppercase">Athanatos</h2>
+    <head>
+        <script src="static/jquery-3.2.1.min.js"></script>
+        <script src="static/jsrender.js"></script>
+        <script>
+            $('head').load("head.html");
+        </script>
+    </head>
+    <body class="w3-theme-dark">
+        <!--Header-->
+        <div class="w3-container w3-theme w3-margin">
+            <h1 class="w3-center" style="text-transform: uppercase">Welcome to boriswinner's page</h1>
+        </div>
+        <!--Top Menu-->
+        <div class="w3-margin">
+            <div class="w3-bar w3-theme w3-large">
+                <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-theme-d1 w3-hover-cyan">Coding</a>
+                <a href="music.html" class="w3-bar-item w3-button w3-mobile w3-theme w3-hover-cyan">Music</a>
+            </div>
+        </div>
+        <header class="w3-container w3-theme-d1 w3-center w3-margin">
+            <h2 class="w3-center" style="text-transform: uppercase">My programming projects</h2>
         </header>
-        <div class="w3-container">
-            <img src="ath.png" style="width:100%">
-            <p> In collaboration with <b>t1meshift</b>. Data storage for business based on blockchain technology. Is
-                written on Java. All the data is stored in the blockchain, which is synchronized beetween the
-                company's computers. Now in development (initially works). Written on VL Hackaton spring 2017. </p>
-            <p><a href="https://github.com/t1meshift/athanatos">Download latest source code (GitHub)</a></p>
-        </div>
-    </div>
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <h2 style="text-transform: uppercase">Raycaster</h2>
-        <div class="w3-container w3-center"><img src="raycaster.gif" style="width:70%">
-            <p>A raycasting engine written with my friend, <b>t1meshift</b>, using Lazarus IDE. Uses SDL2 for hardware
-                render, SquallSound for sound. Supports textures, transparency, solid and not solid walls, colisions,
-                diffenent resolutions and FOV's. Now is is in development. </p>
-            <p><a href="https://github.com/boriswinner/raycaster/tree/testing">Download latest source code (GitHub)</a>
-            </p>
-        </div>
-    </div>
-</div>
 
+        <!--Template for showing content-->
+        <div id="result"></div>
+        </div>
 
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <header class="w3-container w3-Purple">
-            <h2 style="text-transform: uppercase">Dynnu</h2>
-        </header>
-        <div class="w3-container">
-            <img src="DynnuScr.png" style="width:60%">
-            <p>Dunnu is a vector graphics editor written using Lazarus&Free Pascal. Now is is in development. </p>
-            <p><a href="https://github.com/boriswinner/Dynnu/releases/">Download latest release&source code (GitHub)</a>
-            </p>
-        </div>
-    </div>
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">3IR</h2>
-        <div class="w3-container w3-center"><img src="3IR.png" style="width:40%">
-            <p>Candy Eater game, written on JS with <b>ZeroICQ</b> and <b>SergeyZinkovich</b>. </p>
-            <p><a href="https://github.com/ZeroICQ/3IR">Download latest source code (GitHub)</a></p>
-            <p><a href="https://zeroicq.github.io/3IR/">Play Online</a></p>
-        </div>
-    </div>
-</div>
+        <script id="elementTemplate" type="text/x-jsrender">
+                <div class="w3-row-padding w3-margin-bottom">
+                    <div class="w3-half">
+                        <div class="w3-theme-l3 w3-center">
+                            <header class="w3-container">
+                                <h2 style="text-transform: uppercase">
+                                    {{:header1}}
+                                </h2>
+                            </header>
+                            <div class="w3-container">
+                                <img src="{{:img1}}" style="width:{{:imgwidth1}}%">
+                                <p>{{:text1}}</p>
+                                {{if src1}}
+                                    <p><a href="{{:src1}}">Download latest source code (GitHub)</a></p>
+                                {{/if}}
+                                {{if demo1}}
+                                    <p><a href="{{:demo1}}">View online demo</a></p>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div class="w3-theme-l3 w3-center">
+                            <header class="w3-container">
+                                <h2 style="text-transform: uppercase">
+                                    {{:header2}}
+                                </h2>
+                            </header>
+                            <div class="w3-container">
+                                <img src="{{:img2}}" style="width:{{:imgwidth2}}%">
+                                <p>{{:text2}}</p>
+                                {{if src2}}
+                                    <p><a href="{{:src2}}">Download latest source code (GitHub)</a></p>
+                                {{/if}}
+                                {{if demo2}}
+                                    <p><a href="{{:demo2}}">View online demo</a></p>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </script>
 
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <header class="w3-container w3-Purple">
-            <h2 style="text-transform: uppercase">wba</h2>
-        </header>
-        <div class="w3-container">
-            <img src="wba.png" style="width:60%">
-            <p>Web Database Application provides a web interface for a schedule database. This server application is
-                written on Python using Flask as the web framework and Firebird as the database. </p>
-            <p><a href="https://github.com/boriswinner/wba">Download latest release&source code (GitHub)</a></p>
-            </p>
-        </div>
-    </div>
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <h2 style="text-transform: uppercase">fpcCalc</h2>
-        <div class="w3-container w3-center"><img src="screencalc1.png" style="width:40%">
-            <p>fpcCalc is a simple calculator program (partially clone of the one implemented in Windows 7) written
-                using FreePascal and Lazarus IDE. Concieved as just a small homework, this project grew a little further: I
-                added some features and licensed the program under GPLv3.</p>
-            <p><a href="https://github.com/boriswinner/fpcCalc/releases/">Download latest release&source code (GitHub)</a>
-            </p>
-        </div>
-    </div>
-</div>
+        <!--Content-->
+        <script>
+            var data = [
+                {
+                    "header1": "Athanatos",
+                    "img1": "ath.png",
+                    "imgwidth1": "100",
+                    "text1": "In collaboration with <b>t1meshift</b>. Data backup for business. Is written on Java. All\n" +
+                    "                            the data is synchronized beetween the company's computers. Now in development (initially\n" +
+                    "                            works). Written on VL Hackaton spring 2017.",
+                    "src1": "https://github.com/t1meshift/athanatos",
+                    "header2": "Raycaster",
+                    "img2": "raycaster.gif",
+                    "imgwidth2": "60",
+                    "text2": "A raycasting engine written with my friend, <b>t1meshift</b>, using Lazarus IDE. Uses SDL2\n" +
+                    "                            for\n" +
+                    "                            hardware\n" +
+                    "                            render, SquallSound for sound. Supports textures, transparency, solid and not solid walls,\n" +
+                    "                            colisions,\n" +
+                    "                            diffenent resolutions and FOV's. Now is is in development.",
+                    "src2": "https://github.com/boriswinner/raycaster/tree/testing"
+                },
+                {
+                    "header1": "Dynnu",
+                    "img1": "DynnuScr.png",
+                    "imgwidth1": "60",
+                    "text1": "Dunnu is a vector graphics editor written using Lazarus&Free Pascal. Now is is in\n" +
+                    "                            development.",
+                    "src1": "https://github.com/boriswinner/Dynnu/releases/",
+                    "header2": "3IR",
+                    "img2": "3IR.png",
+                    "imgwidth2": "35",
+                    "text2": "Candy Eater game, written on JS with <b>ZeroICQ</b> and <b>SergeyZinkovich</b>.",
+                    "src2": "https://github.com/ZeroICQ/3IR",
+                    "demo2": "https://zeroicq.github.io/3IR/"
+                },
+                {
+                    "header1": "wba",
+                    "img1": "wba.png",
+                    "imgwidth1": "70",
+                    "text1": "Web Database Application provides a web interface for a schedule database. This server\n" +
+                    "                            application is\n" +
+                    "                            written on Python using Flask as the web framework and Firebird as the database.",
+                    "src1": "https://github.com/boriswinner/wba",
+                    "header2": "fpcCalc",
+                    "img2": "screencalc1.png",
+                    "imgwidth2": "35",
+                    "text2": "fpcCalc is a simple calculator program (partially clone of the one implemented in\n" +
+                    "                                Windows 7)\n" +
+                    "                                written\n" +
+                    "                                using FreePascal and Lazarus IDE. Concieved as just a small homework, this project\n" +
+                    "                                grew a\n" +
+                    "                                little\n" +
+                    "                                further: I\n" +
+                    "                                added some features and licensed the program under GPLv3.",
+                    "src2": "https://github.com/boriswinner/fpcCalc/releases/"
+                },
+                {
+                    "header1": "Tic Tac Toe",
+                    "img1": "tic.png",
+                    "imgwidth1": "35",
+                    "text1": "Adoptive Tic Tac Toe Game written on JS, using HTML 5 features.",
+                    "src1": "https://github.com/boriswinner/Tic-Tac-Toe",
+                    "demo1": "https://boriswinner.github.io/Tic-Tac-Toe/",
+                    "header2": "CATS tasks solutions",
+                    "img2": "tasks.png",
+                    "imgwidth2": "70",
+                    "text2": "Just a repo with my homeworks - tasks solutions in the CATS system.",
+                    "src2": "https://github.com/boriswinner/task-solutions/"
+                }
+            ];
+            var template = $.templates("#elementTemplate");
 
-<div class="w3-row">
-    <div class="w3-col s6 w3-theme-l4 w3-center">
-        <header class="w3-container w3-Purple">
-            <h2 style="text-transform: uppercase">Tic Tac Toe</h2>
-        </header>
-        <div class="w3-container">
-            <img src="tic.png" style="width:30%">
-            <p>Adoptive Tic Tac Toe Game written on JS, using HTML 5 features.</p>
-            <p><a href="https://boriswinner.github.io/Tic-Tac-Toe/">Play online</a></p>
-            <p><a href="https://github.com/boriswinner/Tic-Tac-Toe">Download latest release&source code (GitHub)</a></p>
-        </div>
-    </div>
-    <div class="w3-col s6 w3-theme-l3 w3-center">
-        <h2 style="text-transform: uppercase">CATS tasks solutions</h2>
-        <div class="w3-container w3-center"><img src="tasks.png" style="width:50%">
-            <p>Just a repo with my homeworks - tasks solutions in the CATS system. </p>
+            var htmlOutput = template.render(data);
 
-            <p><a href="https://github.com/boriswinner/task-solutions/">Download source codes (GitHub)</a></p>
-        </div>
-    </div>
-</div>
-</body>
+            $("#result").html(htmlOutput);
+        </script>
+    </body>
 </html>
+
